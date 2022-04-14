@@ -52,6 +52,7 @@ namespace VoyageurDeCommerce.modele.algorithmes.realisations
             this.timeur.Stop();
             this.NotifyPropertyChanged("Tournee");
             this.TempsExecution = timeur.ElapsedMilliseconds;
+            this.timeur.Reset();
         }
         //Fait une copie de la tournée de "aCopier" dans "copie" sans créer un objet ni s'associer au même
         private Tournee copieTo(Tournee aCopier, Tournee copie){

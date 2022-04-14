@@ -27,6 +27,7 @@ namespace VoyageurDeCommerce.modele.algorithmes
                 case TypeAlgorithme.INSERTIONCOURT: algo = new AlgoInsertionProche();break;
                 case TypeAlgorithme.INSERTIONLONG: algo = new AlgoInsertionLoin();break;
                 case TypeAlgorithme.RANDOM: algo = new AlgoRandom();break; 
+                case TypeAlgorithme.MATEMRIC: algo = new AlgoMatemric();break; 
 
                 default: throw new ExceptionAlgorithme("Vous n'avez pas modifié la fabrique des algorithmes !");
             }

@@ -10,6 +10,7 @@
         INSERTIONLONG,
         RANDOM,
         RECHERCHELOCALCOPIE,
-        RECHERCHELOCAL
+        RECHERCHELOCAL,
+        MATEMRIC
     }
 }

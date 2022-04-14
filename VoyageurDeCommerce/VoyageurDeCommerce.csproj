@@ -76,6 +76,7 @@
     <Compile Include="modele\algorithmes\realisations\AlgoInsertion.cs" />
     <Compile Include="modele\algorithmes\realisations\AlgoInsertionLoin.cs" />
     <Compile Include="modele\algorithmes\realisations\AlgoInsertionProche.cs" />
+    <Compile Include="modele\algorithmes\realisations\AlgoMatemric.cs" />
     <Compile Include="modele\algorithmes\realisations\AlgoRandom.cs" />
     <Compile Include="modele\algorithmes\realisations\AlgoRechercheLocal.cs" />
     <Compile Include="modele\algorithmes\realisations\AlgorithmeVoisin.cs" />
@@ -155,6 +156,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="ressources\GrapheTribu.gph">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ressources\Graphe2DistanceRandom.gph">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Resource Include="vue\ressources\images\icon.ico" />
