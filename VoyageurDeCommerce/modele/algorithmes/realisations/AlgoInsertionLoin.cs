@@ -83,6 +83,22 @@ namespace VoyageurDeCommerce.modele.algorithmes.realisations
                         }
                         this.Tournee.Add(tempLieu2); // ajoute le dernier temp à la fin de la liste
                     }
+                    else if (x + 3 == this.Tournee.ListeLieux.Count)
+                    {
+                        tailleTournee += minPlusLoin;
+                        // place lieuPlusLoin
+                        tempLieu = this.Tournee.ListeLieux[x];
+                        this.Tournee.ListeLieux[x] = lieuPlusLoin;
+                        // décale la suite de la liste
+                        while (x + 1 < this.Tournee.ListeLieux.Count)
+                        {
+                            tempLieu2 = this.Tournee.ListeLieux[x];
+                            this.Tournee.ListeLieux[x] = tempLieu;
+                            tempLieu = tempLieu2;
+                            x++;
+                        }
+                        this.Tournee.Add(tempLieu2); // ajoute le dernier temp à la fin de la liste
+                    }
                     x++;
                 }
                 chrono.Stop();
