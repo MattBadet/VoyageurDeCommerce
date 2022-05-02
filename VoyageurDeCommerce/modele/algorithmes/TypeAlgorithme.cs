@@ -12,6 +12,8 @@
         RECHERCHELOCALCOPIE,
         RECHERCHELOCAL,
         MATEMRIC,
-        GENETIQUE
+        GENETIQUE10,
+        GENETIQUE25,
+        GENETIQUE60
     }
 }
