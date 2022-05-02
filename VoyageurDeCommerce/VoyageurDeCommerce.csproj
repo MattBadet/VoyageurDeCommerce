@@ -73,6 +73,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="modele\algorithmes\realisations\genetique\AlgoGenetique.cs" />
     <Compile Include="modele\algorithmes\realisations\AlgoInsertion.cs" />
     <Compile Include="modele\algorithmes\realisations\AlgoInsertionLoin.cs" />
     <Compile Include="modele\algorithmes\realisations\AlgoInsertionProche.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="modele\algorithmes\realisations\AlgoRechercheLocal.cs" />
     <Compile Include="modele\algorithmes\realisations\AlgorithmeVoisin.cs" />
     <Compile Include="modele\algorithmes\realisations\AlgortihmeCroissant.cs" />
+    <Compile Include="modele\algorithmes\realisations\genetique\Generation.cs" />
     <Compile Include="modele\distances\FloydWarshall.cs" />
     <Compile Include="vuemodele\VueModeleHistorique.cs" />
     <Compile Include="vue\composants\AnimationColoration.cs" />
@@ -159,6 +161,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="ressources\Graphe2DistanceRandom.gph">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ressources\GrapheETIQ.gph">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Resource Include="vue\ressources\images\icon.ico" />

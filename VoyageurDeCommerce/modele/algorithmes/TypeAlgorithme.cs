@@ -11,6 +11,7 @@
         RANDOM,
         RECHERCHELOCALCOPIE,
         RECHERCHELOCAL,
-        MATEMRIC
+        MATEMRIC,
+        GENETIQUE
     }
 }
