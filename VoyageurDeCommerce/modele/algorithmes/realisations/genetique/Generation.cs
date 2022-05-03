@@ -81,8 +81,14 @@ namespace VoyageurDeCommerce.modele.algorithmes.realisations.genetique
                 //Si aucun n'est possible, choisir le premier lieu possible pas encore dans la liste
                 else
                 {
-                    foreach(Lieu l in t1.ListeLieux) {
-                        if (!melange.ListeLieux.Contains(l)) ;
+                    bool trouve = false; int y = 0;
+                    while(!trouve) {
+                        if (!melange.ListeLieux.Contains(t1.ListeLieux[y])) {
+                            melange.Add(t1.ListeLieux[y]);
+                            trouve = true;
+                        }
+                        y++;
+                        if (y > t1.ListeLieux.Count) trouve = true;
                     }
                 }
             }
