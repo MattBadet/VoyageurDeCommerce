@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,7 +11,7 @@ namespace VoyageurDeCommerce.modele.algorithmes.realisations.genetique
     //Gestion d'un génération précise pour l'algoGénétique
     class Generation
     {
-        private Tournee[] population = new Tournee[50]; //Population de l'algo composé d'un certains nombres d'individus (Tournee)
+        private Tournee[] population = new Tournee[10]; //Population de l'algo composé d'un certains nombres d'individus (Tournee)
         public Tournee[] Population { get => population; set => population = value; }
         Random alea = new Random();
         AlgoRandom algoRandom = new AlgoRandom();
