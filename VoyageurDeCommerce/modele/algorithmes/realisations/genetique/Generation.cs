@@ -33,6 +33,10 @@ namespace VoyageurDeCommerce.modele.algorithmes.realisations.genetique
         public void Evolue() {
             List<Tournee> meilleurs = new List<Tournee>();
             meilleurs = this.Meilleurs();
+            for (int i = 0; i < Population.Length; i++)
+            {
+                this.population[i] = this.Melange(meilleurs[alea.Next(meilleurs.Count - 1)], meilleurs[alea.Next(meilleurs.Count - 1)]);
+            }
         }
         //Renvoie le meilleur individu d'une population
         public Tournee Meilleur() {
@@ -88,7 +92,7 @@ namespace VoyageurDeCommerce.modele.algorithmes.realisations.genetique
                             trouve = true;
                         }
                         y++;
-                        if (y > t1.ListeLieux.Count) trouve = true;
+                        if (y > t1.ListeLieux.Count-1) trouve = true;
                     }
                 }
             }
