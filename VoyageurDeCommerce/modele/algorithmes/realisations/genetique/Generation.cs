@@ -35,27 +35,58 @@ namespace VoyageurDeCommerce.modele.algorithmes.realisations.genetique
             meilleurs = this.Meilleurs();
         }
         //Renvoie le meilleur individu d'une population
-        public Tournee Meilleur(Tournee[] pop) {
-            return null;
+        public Tournee Meilleur() {
+            Tournee tourneeMax = this.Population[0];
+            foreach(Tournee individu in this.Population) {
+                if (individu.Distance > tourneeMax.Distance) tourneeMax = individu;
+            }
+            return tourneeMax;
         }
 
         //Renvoie les 20% meilleurs individus de la population
         private List<Tournee> Meilleurs() {
             List<Tournee> meilleurs = new List<Tournee>();
             //Creation d'une copie
-            Tournee[] copiePop = new Tournee[50];
-            for (int i = 0; i < Population.Length; i++) {
-                copiePop[i] = Population[i];
-            }
-
+            List<Tournee> copiePop = population.ToList();
+            //Recupération à l'aide de la copie des 20% meilleurs dans une list
             for (int i = 0; i < (Population.Length/5); i++) {
-                
+                meilleurs.Add(this.Meilleur());
+                copiePop.Remove(this.Meilleur());
             }
             return meilleurs;
         }
         //Melange deux individu pour en creer un nouveau
         private Tournee Melange(Tournee t1, Tournee t2) {
-            return null;
+            Tournee melange = new Tournee();
+            melange.Add(t1.ListeLieux[0]);
+            for(int i = 1;i < t1.ListeLieux.Count - 1; i++) {
+                //Si les 2 sont possible, selection aléatoire
+                if (!melange.ListeLieux.Contains(t1.ListeLieux[i]) && !melange.ListeLieux.Contains(t1.ListeLieux[i]))
+                {
+                    switch (alea.Next(2))
+                    {
+                        case 0: melange.Add(t1.ListeLieux[i]); break;
+                        case 1: melange.Add(t2.ListeLieux[i]); break;
+                    }
+                }
+                //Si seulement l'un des deux est possible, le prendre
+                else if (!melange.ListeLieux.Contains(t1.ListeLieux[i]))
+                {
+                    melange.Add(t1.ListeLieux[i]);
+                }
+                else if (!melange.ListeLieux.Contains(t1.ListeLieux[i]))
+                {
+                    melange.Add(t2.ListeLieux[i]);
+                }
+                //Si aucun n'est possible, choisir le premier lieu possible pas encore dans la liste
+                else
+                {
+                    foreach(Lieu l in t1.ListeLieux) {
+                        if (!melange.ListeLieux.Contains(l)) ;
+                    }
+                }
+            }
+            return melange;
         }
     }
 }

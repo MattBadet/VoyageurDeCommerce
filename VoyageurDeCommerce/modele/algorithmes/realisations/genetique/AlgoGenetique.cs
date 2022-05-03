@@ -31,7 +31,7 @@ namespace VoyageurDeCommerce.modele.algorithmes.realisations
         }
         //Met le meilleur de la gen actuel dans this.Tournee et en fait une image pour l'ihm
         private void majMeilleur(Generation gen) {
-            this.Tournee = gen.Meilleur(gen.Population);
+            this.Tournee = gen.Meilleur();
             this.cronos.Stop(); this.NotifyPropertyChanged("Tournee"); this.cronos.Start();
         }
     }
